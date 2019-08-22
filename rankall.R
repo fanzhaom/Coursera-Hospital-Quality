@@ -1,6 +1,7 @@
 rankall <- function(outcome, num = "best") {
     ## Read outcome data
-    outcome_data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+    outcome_data <- read.csv("outcome-of-care-measures.csv", colClasses = "character",
+                             na.strings = "Not Available")
     
     ## Check that outcome is valid
     conditions <- c("heart attack", "heart failure", "pneumonia")

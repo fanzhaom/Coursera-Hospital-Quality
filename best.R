@@ -1,6 +1,7 @@
 best <- function(state, outcome) {
     ## Read outcome data
-    outcome_data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+    outcome_data <- read.csv("outcome-of-care-measures.csv", colClasses = "character",
+                             na.strings = "Not Available")
     
     ## Check that state and outcome are valid
     if (!state %in% outcome_data[, 7]) {
